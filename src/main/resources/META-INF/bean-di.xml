@@ -3,14 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<bean id="s1" class="com.mgspring.controller.Student">
+    <property name="id" value="001"/>
+    <property name="name" value="小张"/>
+    <property name="age" value="11" />
+    <property name="sex" value="男"/>
+</bean>
 
-    <bean id="helloworld" class="com.mgspring.controller.HelloWorld">
-        <property name="name" value="spring"/>
-    </bean>
 
-    <bean id="personOne" class="com.mgspring.mod.Person">
-        <property name="id" value="11"/>
-        <property name="name" value="小米"/>
-    </bean>
+
 
 </beans>

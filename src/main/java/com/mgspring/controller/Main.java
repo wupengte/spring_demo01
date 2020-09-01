@@ -5,6 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //ctrl + alt + l 美化代码
 //ctrl + alt + v 自动补全返回值 a
+//sout 输出快捷键
+//alt + insert
+//psvm
 
 public class Main {
 
