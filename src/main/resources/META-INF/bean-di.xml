@@ -1,16 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="s1" class="com.mgspring.controller.Student">
-    <property name="id" value="001"/>
-    <property name="name" value="小张"/>
-    <property name="age" value="11" />
-    <property name="sex" value="男"/>
-</bean>
+    <bean id="s1" class="com.mgspring.controller.Student">
+        <property name="id" value="001"/>
+        <property name="name" value="小张"/>
+        <property name="age" value="11"/>
+        <property name="sex" value="男"/>
+    </bean>
+
+    <bean id="s2" class="com.mgspring.controller.Student">
+        <constructor-arg value="num_001"/>
+        <constructor-arg value="小红"/>
+        <constructor-arg value="12"/>
+        <constructor-arg value="女"/>
+    </bean>
+
+    <bean id="s3" class="com.mgspring.controller.Student">
+        <constructor-arg value="num_003"/>
+        <constructor-arg value="小花"/>
+        <constructor-arg value="90" index="2" type="java.lang.Double"/>
+        <constructor-arg value="男"/>
+    </bean>
+
+    <bean id="s4" class="com.mgspring.controller.Student" p:id="p001" p:age="20" p:name="小p" p:score="77"
+          p:teacher-ref="teacher"/>
+
+    <bean id="s5" class="com.mgspring.controller.Student">
+        <property name="id" value="s0005"/>
+        <property name="name" value="s5"/>
+        <property name="sex" value="男"/>
+        <property name="age" value="22"/>
+        <property name="score" value="99"/>
+        <property name="teacher" ref="teacher"/>
+    </bean>
+
+    <bean id="s6" class="com.mgspring.controller.Student">
+        <property name="id" value="s006"/>
+        <property name="name" value="小六"/>
+        <property name="sex" value="s006"/>
+        <property name="age" value="34"/>
+        <property name="score" value="66"/>
+        <property name="teacher">
+            <bean id="tt" class="com.mgspring.controller.Teacher">
+                <property name="tid" value="001"/>
+                <property name="tname" value="王老师"/>
+            </bean>
+        </property>
+    </bean>
 
 
+    <bean id="t1" class="com.mgspring.controller.Teacher">
+        <property name="tid" value="0001"/>
+        <property name="tname" value="吴老师"/>
+        <property name="students">
+            <list>
+                <ref bean="s1"/>
+                <ref bean="s2"/>
+                <ref bean="s3"/>
+            </list>
+        </property>
+    </bean>
 
+    <bean id="t2" class="com.mgspring.controller.Teacher">
+        <property name="tid" value="0002"/>
+        <property name="tname" value="小吴"/>
+        <property name="cls">
+            <list>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="t3" class="com.mgspring.controller.Teacher">
+        <property name="tid" value="0003"/>
+        <property name="tname" value="老吴"/>
+        <property name="bossmap">
+            <map>
+                <entry>
+                    <key>
+                        <value>111</value>
+                    </key>
+                    <value>黄老师</value>
+                </entry>
+
+                <entry>
+                    <key>
+                        <value>222</value>
+                    </key>
+                    <value>胡老师</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="teacher" class="com.mgspring.controller.Teacher">
+        <property name="tid" value="10000"/>
+        <property name="tname" value="小明"/>
+    </bean>
 
 </beans>
