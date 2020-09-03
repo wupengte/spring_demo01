@@ -9,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //alt + insert getter setter
 //psvm
 //ctrl + alt +o 导入包
+//ctrl +i 接口实现方法  或者 akt+insert
 
 public class Main {
 
