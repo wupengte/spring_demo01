@@ -1,4 +1,4 @@
-package com.mgspring.aop;
+package com.mgspring.aopxml;
 
 
 import org.springframework.stereotype.Controller;

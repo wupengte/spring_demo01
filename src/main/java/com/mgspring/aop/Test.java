@@ -17,7 +17,7 @@ public class Test {
         ApplicationContext cpa = new ClassPathXmlApplicationContext("META-INF/aop.xml");
 //        ApplicationContext cpa = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
         MathI i = cpa.getBean("mathImpl", MathI.class);
-        int result = i.add(1, 2);
+        int result = i.div(4, 2);
         System.out.println(result);
     }
 }
