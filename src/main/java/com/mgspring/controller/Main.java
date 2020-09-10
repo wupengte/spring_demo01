@@ -10,6 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //psvm
 //ctrl + alt +o 导入包
 //ctrl +i 接口实现方法  或者 akt+insert
+//ctrl+ h 查看类的继承关系
+//for各种快捷键 https://www.cnblogs.com/wtjqs/p/10486747.html
 
 public class Main {
 
