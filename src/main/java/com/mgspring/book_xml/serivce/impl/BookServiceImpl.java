@@ -4,7 +4,6 @@ import com.mgspring.book_xml.dao.BookDao;
 import com.mgspring.book_xml.serivce.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 功能描述
